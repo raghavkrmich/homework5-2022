@@ -1,3 +1,5 @@
+/*These next two blocks style the logo ID and create the growing
+ * animation */
 @keyframes anim {
     from {
         width: 25px;
@@ -14,29 +16,35 @@
     animation: anim 5s forwards;
 }
 
-
+/* Style the body's font, background image and color */
 body {
     font-family: 'Poppins', serif;
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
 }
 
+
+/* We are changing the display of the header to flex */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Keeps the color of links blue even after visit */
 a:visited {
     color: blue;
 }
 
+/* Changing it so the direction is stacked for mobile view */
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
-
+/* We set the background-color, border, padding and
+ * border-radius for the header of each of the cards
+ */
 .card > header {
     background-color: #288088;
     border: solid 2px #45ADAD; 
@@ -47,6 +55,7 @@ a:visited {
     border-radius: 50px 50px 0px 0px;
 }
 
+/* Sets the display to flex for parent of cards */
 .pricing {
     display: flex;
     flex-wrap: wrap;
@@ -54,27 +63,36 @@ a:visited {
     
 }
 
+/* This adds the border to the cards */
 .card {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     flex-basis: 450px;
 }
 
+/* Sets the border margin and width for the gallery's images */
 .gallery img {
     border: 10px solid #50C7C7;
     margin: 10px;
     width: 300px;
     
 }
+
+/* Sets the display to flex for the gallery */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-
+/* This is out media query if your screen width is
+ * greater than 900 pixels.
+ */
 @media screen and (min-width:901px) {
 
+    /* For the larger screen we change the flex direction back to row
+     * and we add no warp to pricing
+     */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -89,11 +107,15 @@ a:visited {
         flex-wrap: nowrap;
     }
 
+    /* Sets the flex-basis to 275 px and aligns it to center */
     .card {
         flex-basis: 275px;
         align-self: center;
     }
     
+    /* This fixes the header to the top even when
+     * you scroll down the page
+     */
     body > header {
         position: sticky;
         top: 0;
@@ -101,7 +123,9 @@ a:visited {
 
 }
 
-
+/* Certain users need less motion and this 
+ * media query reduces the motion for them
+ */
 @media screen and (prefers-reduced-motion) {
 
     #logo {
@@ -110,17 +134,23 @@ a:visited {
 
 }
 
+/* This is the query for printing or when you hit ctrl+p */
 @media print {
     
+    /* This sets the font to Arial and removes the background image */
     body {
         font-family: Arial, Helvetica;
         background-image: none;
     }
 
+    /* Aligns to center */
     #logo {
         align-self: center;
     }
 
+    /* We set the appropriate flex directions and set align-items
+     * to stretch to make sure the links stretch the page
+     */
     header {
         flex-direction: column;
         align-items: stretch;
@@ -137,12 +167,14 @@ a:visited {
         align-items: flex-end;
     }
 
+    /* Adds a border and flex basis to cards and aligns them */
     .card {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
         align-self: center;
     }
 
+    /* Removes the gallery from display */
     #gallery{
         display: none;
     }
@@ -151,11 +183,9 @@ a:visited {
         display:none;
     }
 
+    /* Thumbs up added */
     .card > ul > li:nth-child(2)::after {
         content: "\1F44D";
     }
 
 }
-
-
-/* Need to add comments!! */
