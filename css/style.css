@@ -42,6 +42,13 @@ a:visited {
     flex-direction: column;
 }
 
+/* This adds the border to the cards */
+.card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    flex-basis: 450px;
+}
+
 /* We set the background-color, border, padding and
  * border-radius for the header of each of the cards
  */
@@ -61,13 +68,6 @@ a:visited {
     flex-wrap: wrap;
     justify-content: center;
     
-}
-
-/* This adds the border to the cards */
-.card {
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    flex-basis: 450px;
 }
 
 /* Sets the border margin and width for the gallery's images */
