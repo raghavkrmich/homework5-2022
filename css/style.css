@@ -82,6 +82,7 @@ a:visited {
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -103,8 +104,8 @@ a:visited {
 
     .pricing {
         flex-direction: row;
-        justify-content: center;
         flex-wrap: nowrap;
+        justify-content: center;
     }
 
     /* Sets the flex-basis to 275 px and aligns it to center */
